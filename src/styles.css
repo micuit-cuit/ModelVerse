@@ -1,0 +1,53 @@
+:root {
+    --theme-transition: 1s;
+    /* si les thèmes ne marchent pas, regarder dans theme.svelte */
+
+    --light-primary-color: #ff6f61;
+    --light-secondary-color: rgb(45, 45, 45);
+    --light-bg-color: rgb(202, 216, 228);
+    --light-bg-color-gradient: linear-gradient(0deg, rgba(202, 216, 228, 1) 0%, rgba(237, 240, 248, 1) 100%);
+    --light-text-color: #fff;
+    --light-text-color-secondary: #000;
+    --light-border-color: rgb(0, 0, 0);
+    --light-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    --light-discord-color: #7289da;
+    --light-color-gradient: linear-gradient(135deg, #ff6f61 0%, #ffcccb 100%);
+
+    --dark-primary-color: rgb(45, 45, 45);
+    --dark-secondary-color: #ff6f61;
+    --dark-bg-color: #ff6f61;
+    --dark-bg-color-gradient: linear-gradient(0deg, rgba(45, 45, 45, 1) 0%, rgba(70, 70, 70, 1) 100%);
+    --dark-text-color: #fff;
+    --dark-text-color-secondary: #fff;
+    --dark-border-color: rgb(255, 255, 255);
+    --dark-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    --dark-discord-color: #7289da;
+    --dark-color-gradient: linear-gradient(135deg, #3a3a3a 0%, #5e5e5e 100%);
+
+
+    /* ne pas touchez */
+    --primary-color: var(--light-primary-color);
+    --secondary-color: var(--light-secondary-color);
+    --bg-color: var(--light-bg-color);
+    --bg-color-gradient: var(--light-bg-color-gradient);
+    --text-color: var(--light-text-color);
+    --text-color-secondary: var(--light-text-color-secondary);
+    --border-color: var(--light-border-color);
+    --border-color-secondary: var(--light-border-color-secondary);
+    --cta-hover-bg-color: var(--light-cta-hover-bg-color);
+    --model-item-bg-color: var(--light-model-item-bg-color);
+    --nav-hover-color: var(--light-nav-hover-color);
+    --box-shadow: var(--light-box-shadow);
+    --discord-color: var(--light-discord-color);
+    --color-gradient: var(--light-color-gradient);
+}
+body{
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: background-color var(--theme-transition), color var(--theme-transition), background var(--theme-transition);
+}
