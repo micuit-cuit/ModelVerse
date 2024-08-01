@@ -14,13 +14,26 @@
         let url = window.location.href;
         let code = url.split("code=")[1];
         //envoyer le code au serveur
-        fetch("http://localhost:5000/api/login/"+code, {
+        fetch("/api/login/"+code, {
             method: "get",
             headers: {
                 "Content-Type": "application/json"
             }
         }).then(res => res.json()).then(data => {
             console.log(data);
+            //si c'est un succès, on enregistre le token dans le localstorage
+            if(data.success){
+                localStorage.setItem("token", data.token);
+                localStorage.setItem("id", JSON.stringify(data.id));
+                localStorage.setItem("username", data.global_name);
+                localStorage.setItem("avatar", "https://cdn.discordapp.com/avatars/"+data.id+"/"+data.avatar+".png");
+                localStorage.setItem("email", data.email);
+                localStorage.setItem("locale", data.locale);
+                let date = new Date();
+                date.setSeconds(date.getSeconds() + data.expires_in);
+                localStorage.setItem("expires", date);
+                window.location.href = "/";
+            }
         });
     });
 </script>
