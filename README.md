@@ -1,38 +1,90 @@
-# create-svelte
+# Model Verse
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
+## Description
+    
 
-## Creating a project
-
-If you're seeing this, you've probably already done this step. Congrats!
-
-```bash
-# create a new project in the current directory
-npm create svelte@latest
-
-# create a new project in my-app
-npm create svelte@latest my-app
+## Project Structure
+```
+.env
+.gitignore
+.npmrc
+.prettierignore
+.prettierrc
+.svelte-kit/
+    ambient.d.ts
+    generated/
+        client/
+            app.js
+            matchers.js
+            ...
+        root.svelte
+        server/
+    non-ambient.d.ts
+    tsconfig.json
+favion.icon
+package.json
+README.md
+server.js
+src/
+    app.html
+    components/
+        3dModel/
+        gui/
+        menu/
+        user/
+        utilitise/
+    lib/
+        index.js
+        log.js
+    main.js
+    routes/
+        +error.svelte
+        +page.svelte
+        Catégories/
+        credit/
+        login/
+        test/
+    styles.css
+static/
+    icone/
+    imageProfle/
+svelte.config.js
+vite.config.js
 ```
 
-## Developing
+## Installation
+```
+npm install
+```
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
+## Development
+To start the development server:
+```
 npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
 ```
 
-## Building
-
-To create a production version of your app:
-
-```bash
+## Build
+To build the project:
+```
 npm run build
 ```
 
-You can preview the production build with `npm run preview`.
+## Preview
+To preview the built project:
+```
+npm run preview
+```
 
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+## Linting
+To check the code for linting errors:
+```
+npm run lint
+```
+
+To automatically fix linting errors:
+```
+npm run format
+```
+
+## License
+Specify the license under which the project is distributed.
