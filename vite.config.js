@@ -8,5 +8,13 @@ export default defineConfig({
 		alias: {
 		  	$components: path.resolve('src/components')
 		}
-	}
+	},
+	server: {
+        proxy: {
+            '/api': {
+                target: 'http://localhost:5000',
+                changeOrigin: true,
+            }
+        }
+    }
 });
